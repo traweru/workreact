@@ -1,7 +1,7 @@
 import './Button.css'
-export  default function Button({children}){
-function handleClick(){
-    console.log ('button clicked')
-}
-    return <button className='button'onClick={handleClick}>{children}</button>
+export  default function Button({children, onClick,isActive}){
+
+    return <button className={isActive ? 'button active':'button' }onClick={onClick}>
+        {children}
+        </button>
 }
